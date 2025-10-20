@@ -83,42 +83,4 @@ sbatch catching_repeats.sh genome_db.fasta known_repeats.fasta accession_map.txt
 ```
 
 
-# 🧬 Parallel RepeatMasker Pipeline
 
-High-performance parallel processing pipeline for running RepeatMasker on multiple genomes and chromosomes simultaneously.
-
-## 🚀 Usage
-```bash
-sbatch -N  -n  --cpus-per-task=32 script.sh genomes.txt repeats.lib
-```
-### 📥 Input Files
-
-**1. genome_list** - Tab-delimited file with genome IDs in first column:
-```
-bPasDom1
-bTaeGut7
-bZonAlb1
-```
-
-**2. repeat_library** - FASTA file with repeat sequences
-
-### 📁 Required Directory Structure
-```
-genome_dir/
-├── genome.fna                    # Genome FASTA
-├── genome_chromosomes.lst        # List of chromosome names
-└── out/chromosomes/              # Pre-extracted chromosome FASTAs
-    ├── chr1.fasta
-    ├── chr2.fasta
-    └── ...
-```
-### 🎛️ Parallelization
-
-- **Genome level**: Based on `$SLURM_NTASKS`
-- **Chromosome level**: 4 concurrent per genome
-- **RepeatMasker threads**: 8 per chromosome
-
----
-
-**Prerequisites:** RepeatMasker, GNU Parallel, SLURM, gfastats
-aaaaa
