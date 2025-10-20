@@ -1,4 +1,4 @@
-### catching_repeats.sh 
+# catching_repeats.sh 
 ## 📋 Description
 
 The purpose of this pipeline is to generate consensus sequences of repetitive elements that are homologous to a specified query sequence found in other species. It takes as input a database of identified satellite repeats and a query repeat sequence, performs similarity searches using BLAST, and processes the resulting hits to produce refined consensus sequences. 
