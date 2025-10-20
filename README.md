@@ -80,6 +80,7 @@ For each extracted sequence file:
 ```bash
 # Run the pipeline
 sbatch catching_repeats.sh genome_db.fasta known_repeats.fasta accession_map.txt
+```
 
 
 # 🧬 Parallel RepeatMasker Pipeline
